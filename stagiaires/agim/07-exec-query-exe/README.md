@@ -9,3 +9,4 @@
 - Suivez les instructions du fichier `public/index.php` pour créer des pages qui affichent des données
 - Toutes les requêtes doivent être faites dans le controller de routing `controller/routeController.php`
 - Les résultats doivent être affichés dans les vues en utilisant la boucle `foreach`
+adazd
