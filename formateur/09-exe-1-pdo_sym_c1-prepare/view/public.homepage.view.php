@@ -11,27 +11,11 @@
     <title>Sym |Accueil</title>
 </head>
 <body>
-<<<<<<< HEAD
-<nav>
-    <?php
-    foreach($menu as $item):
-    ?>
-    <a href="?section=<?=$item['section_slug']?>"><?=$item['section_title']?></a> |
-    <?php
-    endforeach;
-    ?>
-</nav>
-<h1>Hello world</h1>
-=======
-<?php
-// appel du menu
-include 'inc/public.menu.inc.view.php';
-?>
+
 <h1>Sym | Accueil</h1>
 <h2>Bienvenue sur notre site</h2>
 <h3>Nos 10 derniers articles</h3>
->>>>>>> 4d2cc680217a97731a94d4dc2194e84acfd650be
-
+<p>Affichage des 10 derniers articles</p>
 <?php
 //var_dump($pdo);
 //var_dump($menu);
