@@ -11,8 +11,9 @@
     <title>Sym |Accueil</title>
 </head>
 <body>
-<<<<<<< HEAD
+
 <nav>
+<a href="./">Accueil</a> |
     <?php
     foreach($menu as $item):
     ?>
@@ -21,21 +22,25 @@
     endforeach;
     ?>
 </nav>
-<h1>Hello world</h1>
-=======
-<?php
-// appel du menu
-include 'inc/public.menu.inc.view.php';
-?>
+
 <h1>Sym | Accueil</h1>
 <h2>Bienvenue sur notre site</h2>
 <h3>Nos 10 derniers articles</h3>
->>>>>>> 4d2cc680217a97731a94d4dc2194e84acfd650be
-
+<p>Affichage des 10 derniers articles</p>
 <?php
 //var_dump($pdo);
 //var_dump($menu);
-
 ?>
+
+<?php
+    foreach($article as $value):
+    ?>
+        <p> <?= $value['title'] ?> </p> <br>
+        <p> <?= $value['title_slug'] ?> </p> <br>
+        <p> <?= $value['article_date_create'] ?> </p> <br>
+        <p> <?= $value['text'] ?> </p> <br>
+    <?php
+    endforeach;
+    ?>
 </body>
 </html>

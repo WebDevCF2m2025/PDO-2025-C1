@@ -21,7 +21,8 @@ try{
 }
 
 
-// préparation de la requête avec des
+
+// préparation de la requête avec des 
 // marqueurs nommés ( :nom )
 $prepare = $db->prepare("
     SELECT * 
