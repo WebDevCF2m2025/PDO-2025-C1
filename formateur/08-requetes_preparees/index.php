@@ -1,3 +1,7 @@
+<?php
+require_once "config.php";
+require_once "PDOConnect.php";
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,23 +9,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Accueil</title>
+    <title>Les Requêtes Préparées</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-    <?php
-    foreach($menu as $item):
-    ?>
-    <a href="?section=<?=$item['section_slug']?>"><?=$item['section_title']?></a> |
-    <?php
-    endforeach;
-    ?>
-</nav>
-<h1>Hello world</h1>
-
-<?php
-var_dump($menu);
-var_dump($pdo);
-?>
+    <h1>Les Requêtes Préparées</h1>
+<?php include "menu.php" ?>
 </body>
 </html>

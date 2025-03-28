@@ -5,23 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Accueil</title>
+    <title>Nos 30 derniers articles</title>
 </head>
 <body>
-<nav>
-    <?php
-    foreach($menu as $item):
-    ?>
-    <a href="?section=<?=$item['section_slug']?>"><?=$item['section_title']?></a> |
-    <?php
-    endforeach;
-    ?>
-</nav>
-<h1>Hello world</h1>
-
 <?php
-var_dump($menu);
-var_dump($pdo);
+include "inc/menu.inc.view.php";
 ?>
+<h1>Nos 30 derniers articles</h1>
+<p>Par date desc</p>
+<?php foreach ($article as $value) {
+    ?>
+    <p> <?= $value['title'] ?> </p> <br>
+    <p> <?= $value['article_date_create'] ?> </p> <br>
+    
+    
+   
+    <?php
+} ?>
+
+
 </body>
 </html>
