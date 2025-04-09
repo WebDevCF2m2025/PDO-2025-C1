@@ -25,3 +25,4 @@ require_once "../controller/routeController.php";
 
 
 // fermeture de connexion
+$db = null;
