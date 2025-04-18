@@ -35,22 +35,29 @@ try {
 // si on a envoyé le formulaire avec les bons champs
 // ça a fonctionné# code...
 // tentative d'insertion
+// $error= null;
 
-
-if (isset($_POST['name'], $_POST['email'],$_POST['text'], $_POST['date'])) {
+if (isset($_POST['name'], $_POST['email'], $_POST['text'], $_POST['date'])) {
 
     // tentative d'insertion
-    $insert = setArticle($db, $_POST['name'],$_POST['email'], $_POST['text'], $_POST['date']);
+    $insert = setArticle($db, $_POST['name'], $_POST['email'], $_POST['text'], $_POST['date']);
     // ça a fonctionné
+    // if (is_string($insert)) {
+    //     $error = $insert;
+    // } elseif ($insert === true) {
+    //     header("Location: ./");
+    //     exit();
+    // }
+
     if ($insert === true) {
         header("Location: ./");
         exit();
-    } else {
+    }else{
         $error = $insert;
     }
 }
-$messages = getAllMessagesByDateDesc($db);
 
+$messages = getAllMessagesByDateDesc($db);
 
 
 # ici notre code de traitement de la page
